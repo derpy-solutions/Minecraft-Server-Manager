@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Minecraft Server Manager": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}
