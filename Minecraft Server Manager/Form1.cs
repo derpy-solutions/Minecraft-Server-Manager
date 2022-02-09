@@ -71,20 +71,26 @@ namespace Minecraft_Server_Manager
             var serverPath = einstellungen.Controls["textBox1"];
             var dataPath = einstellungen.Controls["textBox2"];
             var cmdCommand = einstellungen.Controls["textBox3"];
+            var javaPath = einstellungen.Controls["textBox4"];
+
+            if (Properties.Settings.Default.DataPath.ToString() == "" || Properties.Settings.Default.ServerPath.ToString() == "")
+            {
+                Properties.Settings.Default.ServerPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Minecraft Server Manager";
+                Properties.Settings.Default.DataPath = @"C:\Program Files\derpy Solutions\Minecraft Server Manager\Data";
+                Properties.Settings.Default.Save();
+
+                einstellungenTab_Click();
+            }
 
             serverPath.Text = Properties.Settings.Default.ServerPath.ToString();
             dataPath.Text = Properties.Settings.Default.DataPath.ToString();
             cmdCommand.Text = Properties.Settings.Default.cmdCommand.ToString();
+            javaPath.Text = Properties.Settings.Default.JavaPath.ToString();
 
-            if (Properties.Settings.Default["DataPath"].ToString() == "" || Properties.Settings.Default["ServerPath"].ToString() == "")
-            {
-                einstellungenTab_Click();
-            }
-            else
-            {
-                Initialize();
-            }
 
+            Directory.CreateDirectory(Properties.Settings.Default.ServerPath);
+            Directory.CreateDirectory(Properties.Settings.Default.DataPath);
+            Initialize();
 
             loop = new Loop();
             loop.LoopUpdate += new EventHandler<Changes>(OnChange);
@@ -319,7 +325,7 @@ namespace Minecraft_Server_Manager
 
         public void RefreshServerList()
         {
-            var serverPath = Properties.Settings.Default["ServerPath"].ToString() + @"\";
+            var serverPath = Properties.Settings.Default.ServerPath.ToString() + @"\";
             G.ServerFolders = Directory.GetDirectories(serverPath);
             G.ServerFoldersList.Clear();
 
@@ -396,6 +402,7 @@ namespace Minecraft_Server_Manager
                         pid = 0,
                         serverpath = '"' + Properties.Settings.Default.ServerPath + '"',
                         datapath = '"' + Properties.Settings.Default.DataPath + '"',
+                        javapath = '"' + Properties.Settings.Default.JavaPath + '"',
                         command = "StartServer",
                         arguments = '"' + Properties.Settings.Default.cmdCommand + '"',
                     };

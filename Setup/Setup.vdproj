@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_03632E4FB8EE4CD6AE46438419FBF875"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_07AD1A193C6E48F7A8AC87B84C6764B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -27,19 +33,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_4175E330F3FC4D078B18A39DF153C124"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_884BB47871064CAF9D316CEB788DA856"
+        "MsmKey" = "8:_3C91551FEF704CE18487324050794328"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8B7EB49CBFFD489A8ED23C0309D56F76"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C3CB27129B28493389C223E3D548C7E5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -140,6 +146,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_03632E4FB8EE4CD6AE46438419FBF875"
+            {
+            "SourcePath" = "8:..\\..\\Data\\Images\\Minecraft Server Manager.ico"
+            "TargetName" = "8:Minecraft Server Manager.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_07807C50950643C5801D5E08C5B7EDE6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_07AD1A193C6E48F7A8AC87B84C6764B5"
             {
             "SourcePath" = "8:..\\..\\Data\\Images\\derpy.ico"
@@ -160,7 +186,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4175E330F3FC4D078B18A39DF153C124"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C91551FEF704CE18487324050794328"
             {
             "SourcePath" = "8:..\\..\\Data\\MinecraftServerManagerListener.exe"
             "TargetName" = "8:MinecraftServerManagerListener.exe"
@@ -180,7 +206,7 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_884BB47871064CAF9D316CEB788DA856"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C3CB27129B28493389C223E3D548C7E5"
             {
             "SourcePath" = "8:..\\Minecraft Server Manager\\bin\\Release\\net5.0-windows\\Minecraft Server Manager.exe"
             "TargetName" = "8:Minecraft Server Manager.exe"
@@ -312,7 +338,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Minecraft Server Manager"
         "ProductCode" = "8:{D33BE888-3F45-45E9-88E7-8AB60B950A78}"
-        "PackageCode" = "8:{98B475BC-8CA1-4065-B236-C6075FEE94A2}"
+        "PackageCode" = "8:{560106AD-EE3D-4BA1-B90C-61DFD4761DCC}"
         "UpgradeCode" = "8:{445F171F-C587-49A9-A869-611F5D5AD86B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -432,7 +458,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_542CD0D132AB499582FB053CA5811862"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3968E1D2547E4D628D10141546065BEE"
             {
             "Name" = "8:Minecraft Server Manager"
             "Arguments" = "8:"
@@ -440,13 +466,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_884BB47871064CAF9D316CEB788DA856"
+            "Target" = "8:_C3CB27129B28493389C223E3D548C7E5"
             "Folder" = "8:_B0F880400D714E0A9AD85D06FA4A0D2C"
             "WorkingFolder" = "8:_C25FA736FB2F4F6CB323D7A62724067E"
-            "Icon" = "8:_07AD1A193C6E48F7A8AC87B84C6764B5"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6610C1C5CE7F43E49F5D35ECCE7DEBCF"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9A05DC1588704CAA96C9D31EC740A341"
             {
             "Name" = "8:Minecraft Server Manager"
             "Arguments" = "8:"
@@ -454,10 +480,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_884BB47871064CAF9D316CEB788DA856"
+            "Target" = "8:_C3CB27129B28493389C223E3D548C7E5"
             "Folder" = "8:_FBC675E4452F48E0B04A24B97920C3FA"
             "WorkingFolder" = "8:_C25FA736FB2F4F6CB323D7A62724067E"
-            "Icon" = "8:_07AD1A193C6E48F7A8AC87B84C6764B5"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }

@@ -23,6 +23,7 @@ namespace Minecraft_Server_Manager
         public int pid { get; set; }
         public string serverpath { get; set; }
         public string datapath { get; set; }
+        public string javapath { get; set; }
         public string command { get; set; }
         public string arguments { get; set; }
         public void Run()
@@ -32,7 +33,7 @@ namespace Minecraft_Server_Manager
             startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
             startInfo.UseShellExecute = true;
             startInfo.CreateNoWindow = true;
-            startInfo.Arguments = "/C MinecraftServerManagerListener.exe " + name + " " + pid + " " + serverpath + " " + datapath + " " + command + " " + arguments;
+            startInfo.Arguments = "/C MinecraftServerManagerListener.exe " + name + " " + pid + " " + serverpath + " " + datapath + " " + javapath + " " + command + " " + arguments;
             startInfo.WorkingDirectory = Properties.Settings.Default.DataPath;
             process.StartInfo = startInfo;
             process.Start();

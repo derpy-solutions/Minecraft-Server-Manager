@@ -15,7 +15,10 @@
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
     <Setting Name="cmdCommand" Type="System.String" Scope="User">
-      <Value Profile="(Default)">java -Xmx4G @libraries/net/minecraftforge/forge/1.18.1-39.0.64/win_args.txt %* --nogui</Value>
+      <Value Profile="(Default)">-Xmx4G @libraries/net/minecraftforge/forge/1.18.1-39.0.64/win_args.txt %* --nogui</Value>
+    </Setting>
+    <Setting Name="JavaPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files\Java\jdk-17.0.2\bin\java.exe</Value>
     </Setting>
   </Settings>
 </SettingsFile>

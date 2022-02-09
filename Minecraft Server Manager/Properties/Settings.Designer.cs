@@ -73,14 +73,26 @@ namespace Minecraft_Server_Manager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("java -Xmx4G @libraries/net/minecraftforge/forge/1.18.1-39.0.64/win_args.txt %* --" +
-            "nogui")]
+        [global::System.Configuration.DefaultSettingValueAttribute("-Xmx4G @libraries/net/minecraftforge/forge/1.18.1-39.0.64/win_args.txt %* --nogui" +
+            "")]
         public string cmdCommand {
             get {
                 return ((string)(this["cmdCommand"]));
             }
             set {
                 this["cmdCommand"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Program Files\\Java\\jdk-17.0.2\\bin\\java.exe")]
+        public string JavaPath {
+            get {
+                return ((string)(this["JavaPath"]));
+            }
+            set {
+                this["JavaPath"] = value;
             }
         }
     }

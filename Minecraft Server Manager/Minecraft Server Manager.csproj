@@ -5,7 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Minecraft_Server_Manager</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>derpy.ico</ApplicationIcon>
+    <ApplicationIcon>Minecraft Server Manager.ico</ApplicationIcon>
     <StartupObject />
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Minecraft Server Manager_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
@@ -17,6 +17,10 @@
 
   <ItemGroup>
     <None Include="frenkey.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
