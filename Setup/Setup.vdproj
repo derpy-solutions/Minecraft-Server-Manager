@@ -15,25 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_03632E4FB8EE4CD6AE46438419FBF875"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_07AD1A193C6E48F7A8AC87B84C6764B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_23F6B17F13D842E9A9FB0ACDAFC38760"
+        "MsmKey" = "8:_275DC89C0E41492CB270993479B8681E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3C91551FEF704CE18487324050794328"
+        "MsmKey" = "8:_4690E2258F6246A7B3B5088AB7B4DC5A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5120FCF4914E46238BB3B882EEDE6833"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -45,7 +45,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_96011451FE1D41178F298771014F807F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C3CB27129B28493389C223E3D548C7E5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E46B0443E8B247F8AD96D52BA7C5CA38"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -105,13 +117,13 @@
             "PromptEnabled" = "11:TRUE"
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
-            "ComponentsUrl" = "8:"
+            "ComponentsUrl" = "8:F:\\frenkey_Developments\\Visual Studio\\Data"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.DesktopRuntime.5.0.x64"
                     {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    "Name" = "8:.NET Desktop Runtime 5.0.13 (x64)"
+                    "ProductCode" = "8:Microsoft.NetCore.DesktopRuntime.5.0.x64"
                     }
                 }
             }
@@ -146,26 +158,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_03632E4FB8EE4CD6AE46438419FBF875"
-            {
-            "SourcePath" = "8:..\\..\\Data\\Images\\Minecraft Server Manager.ico"
-            "TargetName" = "8:Minecraft Server Manager.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_07807C50950643C5801D5E08C5B7EDE6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_07AD1A193C6E48F7A8AC87B84C6764B5"
             {
             "SourcePath" = "8:..\\..\\Data\\Images\\derpy.ico"
@@ -186,12 +178,72 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C91551FEF704CE18487324050794328"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_275DC89C0E41492CB270993479B8681E"
             {
-            "SourcePath" = "8:..\\..\\Data\\MinecraftServerManagerListener.exe"
-            "TargetName" = "8:MinecraftServerManagerListener.exe"
+            "SourcePath" = "8:C:\\Users\\lasse\\AppData\\Local\\Temp\\Rar$DRa47076.45995\\CenturyGothic.ttf"
+            "TargetName" = "8:CenturyGothic.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_BA764ABEBE4342268DD6C373E80709B9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:5"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4690E2258F6246A7B3B5088AB7B4DC5A"
+            {
+            "SourcePath" = "8:..\\..\\Data\\Century Gothic Fat.ttf"
+            "TargetName" = "8:Century Gothic Fat.ttf"
             "Tag" = "8:"
             "Folder" = "8:_1258A20B752F41269D972E61AAFF562E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5120FCF4914E46238BB3B882EEDE6833"
+            {
+            "SourcePath" = "8:C:\\Users\\lasse\\AppData\\Local\\Temp\\Rar$DRa47076.46674\\GOTHICB0.TTF"
+            "TargetName" = "8:GOTHICB0.TTF"
+            "Tag" = "8:"
+            "Folder" = "8:_BA764ABEBE4342268DD6C373E80709B9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:5"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_96011451FE1D41178F298771014F807F"
+            {
+            "SourcePath" = "8:..\\..\\Data\\Images\\Minecraft Server Manager.ico"
+            "TargetName" = "8:Minecraft Server Manager.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_07807C50950643C5801D5E08C5B7EDE6"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -226,6 +278,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E46B0443E8B247F8AD96D52BA7C5CA38"
+            {
+            "SourcePath" = "8:..\\..\\Data\\MinecraftServerManagerListener.exe"
+            "TargetName" = "8:MinecraftServerManagerListener.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_1258A20B752F41269D972E61AAFF562E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -239,6 +311,17 @@
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:DesktopFolder"
+                "Folders"
+                {
+                }
+            }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_BA764ABEBE4342268DD6C373E80709B9"
+            {
+            "Name" = "8:#1911"
+            "AlwaysCreate" = "11:TRUE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:FontsFolder"
                 "Folders"
                 {
                 }
@@ -337,25 +420,25 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Minecraft Server Manager"
-        "ProductCode" = "8:{D33BE888-3F45-45E9-88E7-8AB60B950A78}"
-        "PackageCode" = "8:{560106AD-EE3D-4BA1-B90C-61DFD4761DCC}"
+        "ProductCode" = "8:{9800E520-0762-4177-B763-DB32D9201D99}"
+        "PackageCode" = "8:{0E9FE37D-EC65-4E0F-AE1B-3B0087985B8D}"
         "UpgradeCode" = "8:{445F171F-C587-49A9-A869-611F5D5AD86B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:0.0.2"
         "Manufacturer" = "8:derpy Solutions"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:mailto:derpy.solutions@gmail.com"
+        "ARPHELPLINK" = "8:https://github.com/derpy-solutions"
         "Title" = "8:Setup - Minecraft Server Manager"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:derpy"
+        "ARPCONTACT" = "8:derpy Solutions"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_96011451FE1D41178F298771014F807F"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -469,7 +552,7 @@
             "Target" = "8:_C3CB27129B28493389C223E3D548C7E5"
             "Folder" = "8:_B0F880400D714E0A9AD85D06FA4A0D2C"
             "WorkingFolder" = "8:_C25FA736FB2F4F6CB323D7A62724067E"
-            "Icon" = "8:"
+            "Icon" = "8:_96011451FE1D41178F298771014F807F"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9A05DC1588704CAA96C9D31EC740A341"
@@ -483,7 +566,7 @@
             "Target" = "8:_C3CB27129B28493389C223E3D548C7E5"
             "Folder" = "8:_FBC675E4452F48E0B04A24B97920C3FA"
             "WorkingFolder" = "8:_C25FA736FB2F4F6CB323D7A62724067E"
-            "Icon" = "8:"
+            "Icon" = "8:_96011451FE1D41178F298771014F807F"
             "Feature" = "8:"
             }
         }
@@ -885,37 +968,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_23F6B17F13D842E9A9FB0ACDAFC38760"
-            {
-            "SourcePath" = "8:..\\Minecraft Server Manager\\obj\\Release\\net5.0-windows\\Minecraft Server Manager.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_C25FA736FB2F4F6CB323D7A62724067E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{06856124-1A08-4B84-84DA-0B08A2F48F00}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8B7EB49CBFFD489A8ED23C0309D56F76"
             {
-            "SourcePath" = "8:..\\Minecraft Server Manager\\obj\\Release\\net5.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\Minecraft Server Manager\\obj\\Debug\\netcoreapp3.1\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C25FA736FB2F4F6CB323D7A62724067E"

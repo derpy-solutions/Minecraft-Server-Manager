@@ -15,6 +15,14 @@ namespace Minecraft_Server_Manager
             InitializeComponent();
 
             this.gamemode.SelectedItem = "Kreativ Modus";
+
+            //Set Font
+
+            this.sCustomCommandRun.Font = G.defaultButtonFont;
+            this.gamemode.Font = G.defaultTextFont;
+            this.player.Font = G.defaultTextFont;
+            this.label1.Font = G.defaultTextFont;
+            this.label2.Font = G.defaultTextFont;
         }
 
         private void sCustomCommandRun_Click(object sender, EventArgs e)

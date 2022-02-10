@@ -32,10 +32,10 @@ namespace Minecraft_Server_Manager
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ToolBar = new System.Windows.Forms.Panel();
+            this.UpdateNotification = new System.Windows.Forms.PictureBox();
             this.einstellungenTab = new System.Windows.Forms.Button();
             this.serverListTab = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TabArea = new System.Windows.Forms.Panel();
             this.einstellungen = new Minecraft_Server_Manager.Einstellungen();
             this.FilterInput = new System.Windows.Forms.TextBox();
             this.serverListView = new System.Windows.Forms.ListBox();
@@ -47,7 +47,7 @@ namespace Minecraft_Server_Manager
             this.RunLoop = new System.ComponentModel.BackgroundWorker();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ToolBar.SuspendLayout();
-            this.TabArea.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateNotification)).BeginInit();
             this.SuspendLayout();
             // 
             // ToolBar
@@ -55,12 +55,24 @@ namespace Minecraft_Server_Manager
             this.ToolBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ToolBar.AutoScroll = true;
+            this.ToolBar.Controls.Add(this.UpdateNotification);
             this.ToolBar.Controls.Add(this.einstellungenTab);
             this.ToolBar.Controls.Add(this.serverListTab);
             this.ToolBar.Location = new System.Drawing.Point(0, 0);
             this.ToolBar.Name = "ToolBar";
-            this.ToolBar.Size = new System.Drawing.Size(55, 835);
+            this.ToolBar.Size = new System.Drawing.Size(55, 794);
             this.ToolBar.TabIndex = 10;
+            // 
+            // UpdateNotification
+            // 
+            this.UpdateNotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.UpdateNotification.Image = ((System.Drawing.Image)(resources.GetObject("UpdateNotification.Image")));
+            this.UpdateNotification.Location = new System.Drawing.Point(12, 752);
+            this.UpdateNotification.Name = "UpdateNotification";
+            this.UpdateNotification.Size = new System.Drawing.Size(30, 30);
+            this.UpdateNotification.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.UpdateNotification.TabIndex = 7;
+            this.UpdateNotification.TabStop = false;
             // 
             // einstellungenTab
             // 
@@ -69,7 +81,7 @@ namespace Minecraft_Server_Manager
             this.einstellungenTab.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.einstellungenTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.einstellungenTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.einstellungenTab.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.einstellungenTab.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.einstellungenTab.ForeColor = System.Drawing.Color.Transparent;
             this.einstellungenTab.Image = ((System.Drawing.Image)(resources.GetObject("einstellungenTab.Image")));
             this.einstellungenTab.Location = new System.Drawing.Point(0, 55);
@@ -87,7 +99,6 @@ namespace Minecraft_Server_Manager
             this.serverListTab.FlatAppearance.BorderSize = 0;
             this.serverListTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.serverListTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.serverListTab.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.serverListTab.ForeColor = System.Drawing.Color.Transparent;
             this.serverListTab.Image = ((System.Drawing.Image)(resources.GetObject("serverListTab.Image")));
             this.serverListTab.Location = new System.Drawing.Point(0, 0);
@@ -110,53 +121,39 @@ namespace Minecraft_Server_Manager
             this.panel1.Size = new System.Drawing.Size(0, 0);
             this.panel1.TabIndex = 9;
             // 
-            // TabArea
-            // 
-            this.TabArea.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.TabArea.AutoScroll = true;
-            this.TabArea.Controls.Add(this.einstellungen);
-            this.TabArea.Controls.Add(this.FilterInput);
-            this.TabArea.Controls.Add(this.serverListView);
-            this.TabArea.Controls.Add(this.label1);
-            this.TabArea.Controls.Add(this.StartServer);
-            this.TabArea.Controls.Add(this.NewServer);
-            this.TabArea.Location = new System.Drawing.Point(55, 0);
-            this.TabArea.Name = "TabArea";
-            this.TabArea.Size = new System.Drawing.Size(440, 835);
-            this.TabArea.TabIndex = 11;
-            // 
             // einstellungen
             // 
-            this.einstellungen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.einstellungen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.einstellungen.AutoScroll = true;
             this.einstellungen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.einstellungen.Location = new System.Drawing.Point(0, 0);
+            this.einstellungen.Location = new System.Drawing.Point(56, 0);
+            this.einstellungen.MinimumSize = new System.Drawing.Size(429, 366);
             this.einstellungen.Name = "einstellungen";
-            this.einstellungen.Size = new System.Drawing.Size(440, 835);
+            this.einstellungen.Size = new System.Drawing.Size(1299, 794);
             this.einstellungen.TabIndex = 0;
             this.einstellungen.Visible = false;
             // 
             // FilterInput
             // 
             this.FilterInput.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FilterInput.Location = new System.Drawing.Point(5, 55);
+            this.FilterInput.Location = new System.Drawing.Point(61, 53);
             this.FilterInput.Name = "FilterInput";
-            this.FilterInput.Size = new System.Drawing.Size(434, 26);
+            this.FilterInput.Size = new System.Drawing.Size(315, 26);
             this.FilterInput.TabIndex = 10;
             this.FilterInput.TextChanged += new System.EventHandler(this.FilterInput_TextChanged);
             // 
             // serverListView
             // 
-            this.serverListView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.serverListView.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.serverListView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.serverListView.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.serverListView.FormattingEnabled = true;
-            this.serverListView.ItemHeight = 21;
-            this.serverListView.Location = new System.Drawing.Point(5, 90);
+            this.serverListView.ItemHeight = 20;
+            this.serverListView.Location = new System.Drawing.Point(61, 84);
             this.serverListView.Name = "serverListView";
-            this.serverListView.Size = new System.Drawing.Size(434, 718);
+            this.serverListView.Size = new System.Drawing.Size(315, 704);
             this.serverListView.TabIndex = 9;
             // 
             // label1
@@ -164,7 +161,7 @@ namespace Minecraft_Server_Manager
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 5);
+            this.label1.Location = new System.Drawing.Point(61, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 30);
             this.label1.TabIndex = 8;
@@ -172,16 +169,15 @@ namespace Minecraft_Server_Manager
             // 
             // StartServer
             // 
-            this.StartServer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.StartServer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.StartServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.StartServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.StartServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartServer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.StartServer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.StartServer.ForeColor = System.Drawing.Color.Transparent;
             this.StartServer.Image = ((System.Drawing.Image)(resources.GetObject("StartServer.Image")));
             this.StartServer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StartServer.Location = new System.Drawing.Point(282, 5);
+            this.StartServer.Location = new System.Drawing.Point(300, 6);
             this.StartServer.Name = "StartServer";
             this.StartServer.Size = new System.Drawing.Size(76, 34);
             this.StartServer.TabIndex = 7;
@@ -192,16 +188,15 @@ namespace Minecraft_Server_Manager
             // 
             // NewServer
             // 
-            this.NewServer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NewServer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.NewServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.NewServer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.NewServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewServer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NewServer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NewServer.ForeColor = System.Drawing.Color.Transparent;
             this.NewServer.Image = ((System.Drawing.Image)(resources.GetObject("NewServer.Image")));
             this.NewServer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewServer.Location = new System.Drawing.Point(364, 5);
+            this.NewServer.Location = new System.Drawing.Point(218, 6);
             this.NewServer.Name = "NewServer";
             this.NewServer.Size = new System.Drawing.Size(76, 34);
             this.NewServer.TabIndex = 6;
@@ -216,9 +211,9 @@ namespace Minecraft_Server_Manager
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(500, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(382, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(689, 835);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(973, 785);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // panel2
@@ -228,7 +223,7 @@ namespace Minecraft_Server_Manager
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Location = new System.Drawing.Point(53, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 835);
+            this.panel2.Size = new System.Drawing.Size(2, 794);
             this.panel2.TabIndex = 2;
             // 
             // toolTip1
@@ -243,19 +238,24 @@ namespace Minecraft_Server_Manager
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.ClientSize = new System.Drawing.Size(1196, 835);
+            this.ClientSize = new System.Drawing.Size(1356, 794);
+            this.Controls.Add(this.einstellungen);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.NewServer);
+            this.Controls.Add(this.StartServer);
+            this.Controls.Add(this.serverListView);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.FilterInput);
             this.Controls.Add(this.ToolBar);
-            this.Controls.Add(this.TabArea);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1250, 253);
             this.Name = "Form1";
             this.Text = "Minecraft Server Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ToolBar.ResumeLayout(false);
-            this.TabArea.ResumeLayout(false);
-            this.TabArea.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdateNotification)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,7 +264,6 @@ namespace Minecraft_Server_Manager
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel ToolBar;
-        private System.Windows.Forms.Panel TabArea;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Einstellungen einstellungen;
         private System.Windows.Forms.Button serverListTab;
@@ -277,6 +276,7 @@ namespace Minecraft_Server_Manager
         private System.Windows.Forms.TextBox FilterInput;
         private System.ComponentModel.BackgroundWorker RunLoop;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox UpdateNotification;
     }
 }
 

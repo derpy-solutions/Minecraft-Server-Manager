@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 namespace GitHub {
     class Run
     {
-        public static List<Root> getReleases()
+        public static bool UpdateAvailable()
         {
             string GetReleases(string username, string repoName)
             {
@@ -17,13 +17,52 @@ namespace GitHub {
                 webClient.Headers.Add("User-Agent", "Unity web player");
                 Uri uri = new Uri(string.Format(GITHUB_API, username, repoName));
                 string releases = webClient.DownloadString(uri);
+
                 return releases;
             }
 
             var str = GetReleases("derpy-solutions", "Minecraft-Server-Manager");
 
-            return JsonConvert.DeserializeObject<List<Root>>(str);
-        }
+            var releases = JsonConvert.DeserializeObject<List<Root>>(str);
+
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+            string version = fvi.FileVersion;
+            Console.WriteLine(version);
+            Minecraft_Server_Manager.G.Ver.current = Version.Parse(version);
+            var update = false;
+
+            foreach (Root release in releases)
+            {
+                Version ver = null;
+
+                if (Version.TryParse(release.tag_name, out ver))
+                {
+                    if (Minecraft_Server_Manager.G.Ver.newest == null || ver > Minecraft_Server_Manager.G.Ver.newest)
+                    {
+                        Minecraft_Server_Manager.G.Ver.newest = ver;
+
+                        if (ver > Version.Parse(version))
+                        {
+                            update = true;
+                        }
+                    }
+                }
+            }
+
+            if (update)
+            {
+                Console.WriteLine("There is an update available!");
+                return true;
+            }
+            if (Minecraft_Server_Manager.G.Ver.newest == null)
+            {
+                Minecraft_Server_Manager.G.Ver.newest = Minecraft_Server_Manager.G.Ver.current;
+            }
+
+            Console.WriteLine("You are currently using the newest version!");
+            return false;
+        }        
     }
 
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);

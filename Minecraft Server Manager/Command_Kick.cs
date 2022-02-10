@@ -13,6 +13,12 @@ namespace Minecraft_Server_Manager
         public Command_Kick()
         {
             InitializeComponent();
+
+            //set font
+            this.sCustomCommandRun.Font = G.defaultButtonFont;
+            this.label2.Font = G.defaultTextFont;
+            this.label1.Font = G.defaultTextFont;
+            this.player.Font = G.defaultTextFont;
         }
 
         private void sCustomCommandRun_Click(object sender, EventArgs e)

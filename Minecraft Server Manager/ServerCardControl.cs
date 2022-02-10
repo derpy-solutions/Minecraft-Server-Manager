@@ -32,6 +32,17 @@ namespace Minecraft_Server_Manager
             this.toolTip1.SetToolTip(this.sCommandSelect, "Wähle einen Befehl aus!");
             this.toolTip1.SetToolTip(this.sCustomCommand, "Gib deinen eigenen Befehl ein!");
             this.toolTip1.SetToolTip(this.sCustomCommandRun, "Führe deinen Befehl aus!");
+
+
+            //Set Font
+            this.sName.Font = G.defaultSubHeaderFont;
+            this.sPlayers.Font = G.defaultTextFont;
+            this.sCustomCommand.Font = G.defaultTextFont;
+            this.sCommandSelect.Font = G.defaultTextFont;
+            this.sCustomCommandRun.Font = G.defaultButtonFont;
+            this.kick.Font = G.defaultButtonFont;
+            this.button2.Font = G.defaultButtonFont;
+            this.sStatus.Font = G.defaultSubHeaderFont;
         }
 
         private void button2_Click(object sender, EventArgs e)

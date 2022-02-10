@@ -22,6 +22,24 @@ namespace Minecraft_Server_Manager
             this.toolTip1.SetToolTip(this.textBox3, "Gib deinen eigenen CMD command ein um die Server zu starten!");
             this.toolTip1.SetToolTip(this.textBox4, "Gib den Pfad zu deiner Java Version an!");
             this.toolTip1.SetToolTip(this.button2, "Löscht alle deine Einstellungen!");
+
+
+            //Set Font
+            this.label1.Font = G.defaultHeaderFont;
+
+            this.button2.Font = G.defaultButtonFont;
+            this.button1.Font = G.defaultButtonFont;
+            this.button3.Font = G.defaultButtonFont;
+            this.button4.Font = G.defaultButtonFont;
+
+            this.label2.Font = G.defaultTextFont;
+            this.textBox1.Font = G.defaultTextFont;
+            this.label3.Font = G.defaultTextFont;
+            this.textBox2.Font = G.defaultTextFont;
+            this.textBox3.Font = G.defaultTextFont;
+            this.label4.Font = G.defaultTextFont;
+            this.textBox4.Font = G.defaultTextFont;
+            this.label5.Font = G.defaultTextFont;
         }
 
         private void button2_Click(object sender, EventArgs e)

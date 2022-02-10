@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Drawing;
+using System.Drawing.Text;
 
 namespace Minecraft_Server_Manager
 {
@@ -15,6 +17,15 @@ namespace Minecraft_Server_Manager
         public static bool running = true;
         public static Control CardPanel;
         public static ListBox serverList;
+        public static Font defaultHeaderFont;
+        public static Font defaultSubHeaderFont;
+        public static Font defaultTextFont;
+        public static Font defaultButtonFont;
+        public class Ver
+        {
+            public static Version current { get; set; }
+            public static Version newest { get; set; }
+        }
     }
 
     public class Command
@@ -269,6 +280,14 @@ namespace Minecraft_Server_Manager
         [STAThread]
         static void Main()
         {
+            var pfc = new PrivateFontCollection();
+            pfc.AddFontFile(Properties.Settings.Default.DataPath + @"\Century Gothic Fat.ttf");
+
+            G.defaultHeaderFont = new Font(pfc.Families[0], 18F, FontStyle.Regular, GraphicsUnit.Point);
+            G.defaultSubHeaderFont = new Font(pfc.Families[0], 14F, FontStyle.Regular, GraphicsUnit.Point);
+            G.defaultTextFont = new Font(pfc.Families[0], 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            G.defaultButtonFont = new Font(pfc.Families[0], 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

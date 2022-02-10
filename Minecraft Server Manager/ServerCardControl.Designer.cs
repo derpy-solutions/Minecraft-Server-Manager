@@ -143,13 +143,13 @@ namespace Minecraft_Server_Manager
             this.sCustomCommandRun.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.sCustomCommandRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.sCustomCommandRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sCustomCommandRun.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.sCustomCommandRun.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.sCustomCommandRun.ForeColor = System.Drawing.Color.Transparent;
             this.sCustomCommandRun.Image = ((System.Drawing.Image)(resources.GetObject("sCustomCommandRun.Image")));
             this.sCustomCommandRun.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.sCustomCommandRun.Location = new System.Drawing.Point(759, 161);
+            this.sCustomCommandRun.Location = new System.Drawing.Point(759, 166);
             this.sCustomCommandRun.Name = "sCustomCommandRun";
-            this.sCustomCommandRun.Size = new System.Drawing.Size(76, 34);
+            this.sCustomCommandRun.Size = new System.Drawing.Size(76, 28);
             this.sCustomCommandRun.TabIndex = 5;
             this.sCustomCommandRun.Text = "Run";
             this.sCustomCommandRun.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -163,7 +163,7 @@ namespace Minecraft_Server_Manager
             this.kick.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.kick.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.kick.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.kick.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.kick.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.kick.ForeColor = System.Drawing.Color.Transparent;
             this.kick.Image = ((System.Drawing.Image)(resources.GetObject("kick.Image")));
             this.kick.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,7 +183,7 @@ namespace Minecraft_Server_Manager
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

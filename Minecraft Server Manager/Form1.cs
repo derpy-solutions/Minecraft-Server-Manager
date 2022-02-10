@@ -65,6 +65,18 @@ namespace Minecraft_Server_Manager
         public Form1()
         {
             InitializeComponent();
+            if (GitHub.Run.UpdateAvailable())
+            {
+                this.UpdateNotification.Image = Properties.Resources.circle_exclamationmark_red;
+                this.toolTip1.SetToolTip(this.UpdateNotification, "There is an update update available!" + Environment.NewLine + "Current: " + G.Ver.current.ToString() + Environment.NewLine + "Newest: " + G.Ver.newest.ToString());
+            }
+            else
+            {
+                this.UpdateNotification.Image = Properties.Resources.circle_checkmark_green;
+                this.toolTip1.SetToolTip(this.UpdateNotification, "No update available." + Environment.NewLine + "Current: " + G.Ver.current.ToString() + Environment.NewLine + "Newest: " + G.Ver.newest.ToString());
+            }
+
+
             G.CardPanel = flowLayoutPanel1;
             G.serverList = serverListView;
 
@@ -91,11 +103,22 @@ namespace Minecraft_Server_Manager
             Directory.CreateDirectory(Properties.Settings.Default.ServerPath);
             Directory.CreateDirectory(Properties.Settings.Default.DataPath);
             Initialize();
+            SetFonts();
 
             loop = new Loop();
             loop.LoopUpdate += new EventHandler<Changes>(OnChange);
             loopThread = new Thread(new ThreadStart(loop.Run));
             loopThread.Start();
+        }
+
+        private void SetFonts()
+        {
+            // Main Window
+            this.label1.Font = G.defaultHeaderFont;
+            this.FilterInput.Font = G.defaultTextFont;
+            this.serverListView.Font = G.defaultTextFont;
+            this.NewServer.Font = G.defaultButtonFont;
+            this.StartServer.Font = G.defaultButtonFont;
         }
 
         public class Loop
@@ -339,7 +362,7 @@ namespace Minecraft_Server_Manager
 
             foreach (string server in G.ServerFoldersList)
             {
-                if (server.Contains(this.FilterInput.Text))
+                if (server.Contains(this.FilterInput.Text, StringComparison.OrdinalIgnoreCase))
                 {
                     this.serverListView.Items.Add(server);
                     //Console.WriteLine("[" + DateTime.Now +"]: " +server);

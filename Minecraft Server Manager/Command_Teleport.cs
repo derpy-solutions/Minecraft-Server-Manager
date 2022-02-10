@@ -13,6 +13,13 @@ namespace Minecraft_Server_Manager
         public Command_Teleport()
         {
             InitializeComponent();
+
+            //Set Font
+            this.player1.Font = G.defaultTextFont;
+            this.label1.Font = G.defaultTextFont;
+            this.player2.Font = G.defaultTextFont;
+            this.label2.Font = G.defaultTextFont;
+            this.sCustomCommandRun.Font = G.defaultButtonFont;
         }
 
         private void sCustomCommandRun_Click(object sender, EventArgs e)

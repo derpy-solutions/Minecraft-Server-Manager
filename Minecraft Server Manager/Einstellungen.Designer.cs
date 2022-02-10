@@ -73,22 +73,22 @@ namespace Minecraft_Server_Manager
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(5, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 18);
+            this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Server Pfad";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(5, 123);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 18);
+            this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Data Pfad";
             // 
@@ -99,13 +99,13 @@ namespace Minecraft_Server_Manager
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Transparent;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(174, 329);
+            this.button2.Location = new System.Drawing.Point(171, 329);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(255, 34);
+            this.button2.Size = new System.Drawing.Size(253, 34);
             this.button2.TabIndex = 9;
             this.button2.Text = "Einstellungen zurücksetzten";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -136,11 +136,11 @@ namespace Minecraft_Server_Manager
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(5, 259);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 18);
+            this.label4.Size = new System.Drawing.Size(128, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "CMD Command";
             // 
@@ -151,7 +151,6 @@ namespace Minecraft_Server_Manager
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(388, 78);
@@ -169,7 +168,6 @@ namespace Minecraft_Server_Manager
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Transparent;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(388, 146);
@@ -187,7 +185,6 @@ namespace Minecraft_Server_Manager
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button4.ForeColor = System.Drawing.Color.Transparent;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(388, 213);
@@ -211,11 +208,11 @@ namespace Minecraft_Server_Manager
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(5, 190);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 18);
+            this.label5.Size = new System.Drawing.Size(84, 20);
             this.label5.TabIndex = 15;
             this.label5.Text = "Java Pfad";
             // 
@@ -227,6 +224,7 @@ namespace Minecraft_Server_Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox4);
@@ -251,21 +249,21 @@ namespace Minecraft_Server_Manager
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.ToolTip toolTip1;
         public System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.Label label5;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
