@@ -13,7 +13,3 @@ In order to use the **Minecraft Server Manager** you will need to install **.NET
 ![Preview](https://user-images.githubusercontent.com/99297851/153275833-087d8131-f171-4c09-a2c2-dfef4c490ff1.PNG)
 
 ## To Do - Planned Features
-- [ ] #1
-- [x] #2
-- [ ] #3
-- [ ] #4
