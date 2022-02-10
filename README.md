@@ -13,3 +13,7 @@ In order to use the **Minecraft Server Manager** you will need to install **.NET
 ![Preview](https://user-images.githubusercontent.com/99297851/153275833-087d8131-f171-4c09-a2c2-dfef4c490ff1.PNG)
 
 ## To Do - Planned Features
+- [ ] #1 add International Support for UI elements
+- [x] #2 add Option for Automatic Version checks
+- [ ] #3 add a way to switch between multiple Java/Minecraft Versions more easily
+- [ ] #4 add a startup per server
