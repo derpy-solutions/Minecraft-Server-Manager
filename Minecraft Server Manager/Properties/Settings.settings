@@ -20,5 +20,8 @@
     <Setting Name="JavaPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Program Files\Java\jdk-17.0.2\bin\java.exe</Value>
     </Setting>
+    <Setting Name="CheckForUpdates" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

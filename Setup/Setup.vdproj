@@ -21,25 +21,31 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_275DC89C0E41492CB270993479B8681E"
+        "MsmKey" = "8:_48006EE587654402A12FBC0073F35C9A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_4690E2258F6246A7B3B5088AB7B4DC5A"
+        "MsmKey" = "8:_5FB590D8B607422685FD12552698925E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5120FCF4914E46238BB3B882EEDE6833"
+        "MsmKey" = "8:_7E63FD319DD5437981F7C0790061958D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_8B7EB49CBFFD489A8ED23C0309D56F76"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8C286A0B78AF4EEDAC0DD69B24B7D423"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -57,7 +63,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E46B0443E8B247F8AD96D52BA7C5CA38"
+        "MsmKey" = "8:_CCF5354948794B2ABE79970245CB6C96"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DFEFE05168FE43C0BB8B56203CBE9BDD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -178,32 +190,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_275DC89C0E41492CB270993479B8681E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_48006EE587654402A12FBC0073F35C9A"
             {
-            "SourcePath" = "8:C:\\Users\\lasse\\AppData\\Local\\Temp\\Rar$DRa47076.45995\\CenturyGothic.ttf"
-            "TargetName" = "8:CenturyGothic.ttf"
+            "SourcePath" = "8:..\\..\\Data\\Fonts\\CenturyGothic_Regular.ttf"
+            "TargetName" = "8:CenturyGothic_Regular.ttf"
             "Tag" = "8:"
-            "Folder" = "8:_BA764ABEBE4342268DD6C373E80709B9"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:5"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4690E2258F6246A7B3B5088AB7B4DC5A"
-            {
-            "SourcePath" = "8:..\\..\\Data\\Century Gothic Fat.ttf"
-            "TargetName" = "8:Century Gothic Fat.ttf"
-            "Tag" = "8:"
-            "Folder" = "8:_1258A20B752F41269D972E61AAFF562E"
+            "Folder" = "8:_E3A0798E4E284F548FDEF63896CD1A3C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -218,12 +210,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5120FCF4914E46238BB3B882EEDE6833"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5FB590D8B607422685FD12552698925E"
             {
-            "SourcePath" = "8:C:\\Users\\lasse\\AppData\\Local\\Temp\\Rar$DRa47076.46674\\GOTHICB0.TTF"
-            "TargetName" = "8:GOTHICB0.TTF"
+            "SourcePath" = "8:..\\..\\Data\\Fonts\\CenturyGothic_Bold_Italic.ttf"
+            "TargetName" = "8:CenturyGothic_Bold_Italic.ttf"
             "Tag" = "8:"
-            "Folder" = "8:_BA764ABEBE4342268DD6C373E80709B9"
+            "Folder" = "8:_E3A0798E4E284F548FDEF63896CD1A3C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -233,7 +225,47 @@
             "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
-            "Register" = "3:5"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7E63FD319DD5437981F7C0790061958D"
+            {
+            "SourcePath" = "8:..\\..\\Data\\Fonts\\CenturyGothic_Italic.ttf"
+            "TargetName" = "8:CenturyGothic_Italic.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_E3A0798E4E284F548FDEF63896CD1A3C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8C286A0B78AF4EEDAC0DD69B24B7D423"
+            {
+            "SourcePath" = "8:..\\..\\Data\\Fonts\\CenturyGothic_Bold.ttf"
+            "TargetName" = "8:CenturyGothic_Bold.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_E3A0798E4E284F548FDEF63896CD1A3C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
@@ -278,7 +310,27 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E46B0443E8B247F8AD96D52BA7C5CA38"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CCF5354948794B2ABE79970245CB6C96"
+            {
+            "SourcePath" = "8:..\\..\\Data\\Century Gothic Fat.ttf"
+            "TargetName" = "8:Century Gothic Fat.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_1258A20B752F41269D972E61AAFF562E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DFEFE05168FE43C0BB8B56203CBE9BDD"
             {
             "SourcePath" = "8:..\\..\\Data\\MinecraftServerManagerListener.exe"
             "TargetName" = "8:MinecraftServerManagerListener.exe"
@@ -389,6 +441,17 @@
                                     }
                                 }
                             }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_E3A0798E4E284F548FDEF63896CD1A3C"
+                            {
+                            "Name" = "8:Fonts"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_2F6B95A604094C3FBA87B10EAF2431FC"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -420,15 +483,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Minecraft Server Manager"
-        "ProductCode" = "8:{9800E520-0762-4177-B763-DB32D9201D99}"
-        "PackageCode" = "8:{0E9FE37D-EC65-4E0F-AE1B-3B0087985B8D}"
+        "ProductCode" = "8:{38985DC3-C5C7-4218-A290-B840C882B0B3}"
+        "PackageCode" = "8:{992467C6-5650-4853-9D82-3DC7964AC51C}"
         "UpgradeCode" = "8:{445F171F-C587-49A9-A869-611F5D5AD86B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.0.2"
+        "ProductVersion" = "8:0.1.0"
         "Manufacturer" = "8:derpy Solutions"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/derpy-solutions"
