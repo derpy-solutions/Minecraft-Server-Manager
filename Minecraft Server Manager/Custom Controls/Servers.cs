@@ -114,7 +114,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
                     {
                         string sName = Regex.Replace(folders[i], @".*\\", "");
 
-                        if (sName.Contains(this.Search_Input.Text, StringComparison.OrdinalIgnoreCase))
+                        if (sName.Contains(this.Search_Input.Text, StringComparison.OrdinalIgnoreCase) && sName != "MSM Source")
                         {
                             var index = this.ServerListBox.Items.Add(sName);
 
@@ -189,10 +189,10 @@ namespace Minecraft_Server_Manager.Custom_Controls
             var name = Search_Input.Text.Trim() ;
             var names = ServerListBox.Items.Cast<String>().ToList();
 
-            if (name != "" && !names.Contains(name, StringComparer.OrdinalIgnoreCase))
+            if (name != "" && !names.Contains(name, StringComparer.OrdinalIgnoreCase) && Directory.Exists(Properties.Settings.Default.ServerPath.ToString() + @"\MSM Source"))
             {
                 Console.WriteLine("[" + DateTime.Now + "]: " + "add Server: " + name);
-                Dir.Copy(Properties.Settings.Default.DataPath.ToString() + @"\ServerSource", Properties.Settings.Default.ServerPath.ToString() + @"\" + name);
+                Dir.Copy(Properties.Settings.Default.ServerPath.ToString() + @"\MSM Source", Properties.Settings.Default.ServerPath.ToString() + @"\" + name);
                 RefreshServerList();
             }
         }

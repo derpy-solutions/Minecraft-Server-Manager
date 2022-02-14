@@ -48,6 +48,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             JavaPath_Label.Text = "Java " + Main.rm.GetString("Path");
             CMDCommand_Label.Text = "CMD " + Main.rm.GetString("Command");
             CheckForUpdates.Text = Main.rm.GetString("SearchForUpdates");
+            show_Tooltips.Text = Main.rm.GetString("Show_ToolTips");
             ResetSettings.Text = Main.rm.GetString("ResetSettings");
             LanguageLabel.Text = Main.rm.GetString("Language");
 

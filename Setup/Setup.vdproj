@@ -483,15 +483,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Minecraft Server Manager"
-        "ProductCode" = "8:{54E374A6-BAF3-4308-84A6-3E57C03314B9}"
-        "PackageCode" = "8:{D54002E2-4BA8-45CC-8EE7-652A756A1717}"
+        "ProductCode" = "8:{34B54F59-6FBA-48C7-9335-CF4A37610DDB}"
+        "PackageCode" = "8:{91F91696-CBF0-40FD-A99D-1C9EDF15335A}"
         "UpgradeCode" = "8:{445F171F-C587-49A9-A869-611F5D5AD86B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:0.1.1"
+        "ProductVersion" = "8:0.1.2"
         "Manufacturer" = "8:derpy Solutions"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/derpy-solutions"
@@ -1033,7 +1033,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8B7EB49CBFFD489A8ED23C0309D56F76"
             {
-            "SourcePath" = "8:..\\Minecraft Server Manager\\obj\\Debug\\netcoreapp3.1\\apphost.exe"
+            "SourcePath" = "8:..\\Minecraft Server Manager\\obj\\Debug\\net5.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_C25FA736FB2F4F6CB323D7A62724067E"

@@ -104,7 +104,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.sCustomCommandRun.ForeColor = System.Drawing.Color.Transparent;
             this.sCustomCommandRun.Image = ((System.Drawing.Image)(resources.GetObject("sCustomCommandRun.Image")));
             this.sCustomCommandRun.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.sCustomCommandRun.Location = new System.Drawing.Point(752, 161);
+            this.sCustomCommandRun.Location = new System.Drawing.Point(752, 173);
             this.sCustomCommandRun.Name = "sCustomCommandRun";
             this.sCustomCommandRun.Size = new System.Drawing.Size(80, 30);
             this.sCustomCommandRun.TabIndex = 26;
@@ -118,7 +118,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.sCustomCommand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sCustomCommand.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sCustomCommand.Location = new System.Drawing.Point(174, 163);
+            this.sCustomCommand.Location = new System.Drawing.Point(174, 175);
             this.sCustomCommand.Name = "sCustomCommand";
             this.sCustomCommand.Size = new System.Drawing.Size(536, 26);
             this.sCustomCommand.TabIndex = 25;
@@ -135,7 +135,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.sBox.Location = new System.Drawing.Point(174, 43);
             this.sBox.Name = "sBox";
             this.sBox.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.sBox.Size = new System.Drawing.Size(658, 110);
+            this.sBox.Size = new System.Drawing.Size(658, 122);
             this.sBox.TabIndex = 24;
             this.sBox.TabStop = false;
             // 
@@ -179,9 +179,9 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.sPlayers.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.sPlayers.FormattingEnabled = true;
             this.sPlayers.ItemHeight = 20;
-            this.sPlayers.Location = new System.Drawing.Point(6, 47);
+            this.sPlayers.Location = new System.Drawing.Point(5, 37);
             this.sPlayers.Name = "sPlayers";
-            this.sPlayers.Size = new System.Drawing.Size(153, 144);
+            this.sPlayers.Size = new System.Drawing.Size(153, 164);
             this.sPlayers.Sorted = true;
             this.sPlayers.TabIndex = 23;
             // 
@@ -235,7 +235,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ServerCard";
-            this.Size = new System.Drawing.Size(838, 196);
+            this.Size = new System.Drawing.Size(838, 208);
             this.MouseEnter += new System.EventHandler(this.ServerCard_MouseEnter);
             this.sBox.ResumeLayout(false);
             this.ResumeLayout(false);

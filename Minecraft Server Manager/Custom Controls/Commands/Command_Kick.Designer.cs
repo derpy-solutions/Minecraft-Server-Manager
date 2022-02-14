@@ -100,7 +100,7 @@ namespace Minecraft_Server_Manager.Custom_Controls.Commands
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.Kick_Label);
             this.flowLayoutPanel1.Controls.Add(this.Player);
             this.flowLayoutPanel1.Controls.Add(this.of_Server);

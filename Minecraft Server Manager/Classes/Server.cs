@@ -423,10 +423,12 @@ namespace Minecraft_Server_Manager
 
             
             command.Run();
+            if (G.ProcessExists(pid)) {
             var p = Process.GetProcessById(pid);
-            if (p != null)
-            {
-                p.Close();
+                if (p != null)
+                {
+                    p.Close();
+                }
             }
         }
         public void ReadIni(string path = null)
