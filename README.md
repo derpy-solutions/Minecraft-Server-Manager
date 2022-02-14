@@ -2,6 +2,7 @@
 A derpy solution to manage multiple local java minecraft servers.
 
 Designed for local networks in youth centers, schools etc. 
+https://www.youtube.com/watch?v=_lPqOyG0amo
 
 Enjoy!
 
