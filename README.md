@@ -2,10 +2,10 @@
 A derpy solution to manage multiple local java minecraft servers.
 
 Designed for local networks in youth centers, schools etc. 
-https://www.youtube.com/watch?v=_lPqOyG0amo
 
 Enjoy!
 
+Make sure to check out the [youtube video](https://www.youtube.com/watch?v=_lPqOyG0amo) for it as well!
 ![PreviewServers](https://user-images.githubusercontent.com/99297851/153873081-1da6f202-c484-4e37-8282-441dab4bd23f.png)
 
 ## Installation
