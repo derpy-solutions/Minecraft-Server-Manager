@@ -12,7 +12,9 @@ namespace Minecraft_Server_Manager
     class GitHub
     {
         public static DateTime UpdateCheckTime { get; set; }
+        public static DateTime ui_updated { get; set; }
         public static bool hasInternet;
+        public static bool dismissUpdate;
         public static bool updateAvailable;
         public static Version current;
         public static Version newest;
@@ -21,68 +23,102 @@ namespace Minecraft_Server_Manager
 
         public static void UpdateUI()
         {
-            if (hasInternet && updateAvailable)
+            if (ui_updated != UpdateCheckTime || !UI_Updated)
             {
-                MyControls.SideBar.UpdateNotification.Image = Properties.Resources.circle_exclamationmark_red;
-                MyControls.SideBar.NewestVersion.Text = newest.ToString();
-                MyControls.SideBar.CurrentVersion.Text = current.ToString();
-                MyControls.SideBar.UpdateButton.Show();
-
-                MyControls.SideBar.toolTip1.SetToolTip(MyControls.SideBar.UpdateNotification, "There is an update update available!" + Environment.NewLine + "Please update!");
-
-                if (File.Exists(Properties.Settings.Default.DataPath + @"\" + G.Ver.newest.ToString() + " Minecraft.Server.Manager.Setup.msi"))
+                if (hasInternet && updateAvailable)
                 {
-                    MyControls.SideBar.UpdateButton.Text = "         Install Update";
-                    MyControls.SideBar.UpdateButton.Image = Properties.Resources.unbox;
-                }
-            }
-            else
-            {
-                if (hasInternet)
-                {
-                    MyControls.SideBar.UpdateNotification.Image = Properties.Resources.circle_checkmark_green;
-                }
-                else
-                {
-                    MyControls.SideBar.UpdateNotification.Image = Properties.Resources.no_internet;
-                    MyControls.SideBar.toolTip1.SetToolTip(MyControls.SideBar.UpdateNotification, "Unable to check for updates. Please connect with the Internet!");
-                }
-
-
-                if (newest != null)
-                {
+                    MyControls.SideBar.UpdateNotification.Image = Properties.Resources.circle_exclamationmark_red;
                     MyControls.SideBar.NewestVersion.Text = newest.ToString();
+                    MyControls.SideBar.CurrentVersion.Text = current.ToString();
+                    MyControls.SideBar.UpdateButton.Show();
+
+                    if (Properties.Settings.Default.ShowTooltips)
+                    {
+                        MyControls.Main.toolTip1.SetToolTip(MyControls.SideBar.UpdateNotification, Main.rm.GetString("ttp_UpdateAvailable"));
+                    }
+                    Console.WriteLine("UPDATE?!");
+                    Console.WriteLine("Dismiss Update: " + dismissUpdate);
+
+                    if (File.Exists(Properties.Settings.Default.DataPath + @"\" + G.Ver.newest.ToString() + " Minecraft.Server.Manager.Setup.msi"))
+                    {
+                        MyControls.SideBar.UpdateButton.Text = "         " + Main.rm.GetString("Install") + " Update";
+                        MyControls.SideBar.UpdateButton.Image = Properties.Resources.unbox;
+
+                        if (!dismissUpdate)
+                        {
+                            MyControls.Main.restartPopUp.type = "Install";
+                            MyControls.Main.restartPopUp.Content.Text = Main.rm.GetString("UpdateInstall");
+                            MyControls.Main.restartPopUp.Restart.Text = Main.rm.GetString("Yes");
+                            MyControls.Main.restartPopUp.NoRestart.Text = Main.rm.GetString("No");
+                            MyControls.Main.restartPopUp.Show();
+                        }
+                    }
+                    else
+                    {
+                        if (!dismissUpdate)
+                        {
+                            MyControls.Main.restartPopUp.type = "Download";
+                            MyControls.Main.restartPopUp.Content.Text = Main.rm.GetString("UpdatePopUp");
+                            MyControls.Main.restartPopUp.Restart.Text = Main.rm.GetString("Yes");
+                            MyControls.Main.restartPopUp.NoRestart.Text = Main.rm.GetString("No");
+                            MyControls.Main.restartPopUp.Show();
+                        }
+                    }
                 }
                 else
                 {
-                    MyControls.SideBar.NewestVersion.Text = "N/A";
+                    if (hasInternet)
+                    {
+                        MyControls.SideBar.UpdateNotification.Image = Properties.Resources.circle_checkmark_green;
+                    }
+                    else
+                    {
+                        MyControls.SideBar.UpdateNotification.Image = Properties.Resources.no_internet;
+
+                        if (Properties.Settings.Default.ShowTooltips)
+                        {
+                            MyControls.Main.toolTip1.SetToolTip(MyControls.SideBar.UpdateNotification, Main.rm.GetString("ttp_NoInternet"));
+                        }
+                    }
+
+
+                    if (newest != null)
+                    {
+                        MyControls.SideBar.NewestVersion.Text = newest.ToString();
+                    }
+                    else
+                    {
+                        MyControls.SideBar.NewestVersion.Text = "N/A";
+                    }
+
+                    if (current != null)
+                    {
+                        MyControls.SideBar.CurrentVersion.Text = current.ToString();
+                    }
+                    else
+                    {
+                        System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+                        System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
+                        string version = fvi.FileVersion;
+                        Console.WriteLine(version);
+                        current = Version.Parse(version);
+
+                        MyControls.SideBar.CurrentVersion.Text = current.ToString();
+                    }
                 }
 
-                if (current != null)
-                {
-                    MyControls.SideBar.CurrentVersion.Text = current.ToString();
-                }
-                else
-                {
-                    System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-                    System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
-                    string version = fvi.FileVersion;
-                    Console.WriteLine(version);
-                    current = Version.Parse(version);
-
-                    MyControls.SideBar.CurrentVersion.Text = current.ToString();
-                }
+                UI_Updated = true;
+                ui_updated = UpdateCheckTime;
             }
-
-            UI_Updated = true;
         }
 
         public static bool CheckForUpdates(bool force = false)
         {
             if (Properties.Settings.Default.CheckForUpdates)
             {
-                if (force || UpdateCheckTime == null || DateTime.Now.Subtract(UpdateCheckTime).TotalMinutes >= 60)
+                if (force || DateTime.Now.Subtract(UpdateCheckTime).TotalMinutes >= 60)
                 {
+                    Console.WriteLine("Time Since Update: " + DateTime.Now.Subtract(UpdateCheckTime).TotalMinutes);
                     UpdateCheckTime = DateTime.Now;
                     hasInternet = HasInternetConnection(2500);
 

@@ -27,12 +27,22 @@ namespace Minecraft_Server_Manager.Custom_Controls
 #endif
             }
 
-                Inits.Voids.Add(Init);
+            SearchPlaceholder.Text = Main.rm.GetString("Search");
+            CreateServer.Text = Main.rm.GetString("New");
+            StartServer.Text = Main.rm.GetString("Start");
+
+            Inits.Voids.Add(Init);
         }
 
         public void Init()
         {
             RefreshServerList();
+
+            if (Properties.Settings.Default.ShowTooltips)
+            {
+                MyControls.Main.toolTip1.SetToolTip(CreateServer, Main.rm.GetString("ttp_New") + Main.rm.GetString("Server"));
+                MyControls.Main.toolTip1.SetToolTip(StartServer, Main.rm.GetString("ttp_Start"));
+            }
         }
 
             private void Search_Input_Enter(object sender, EventArgs e)

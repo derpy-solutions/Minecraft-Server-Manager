@@ -14,6 +14,8 @@ namespace Minecraft_Server_Manager.Custom_Controls
         {
             InitializeComponent();
             G.favoritesPanel = this.FavoritesPanel;
+
+            FavoritesLabel.Text = Main.rm.GetString("Favorites");
         }
 
         private void FavoritesMenu_Deactivate(object sender, EventArgs e)

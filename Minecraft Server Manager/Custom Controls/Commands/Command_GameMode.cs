@@ -14,12 +14,14 @@ namespace Minecraft_Server_Manager.Custom_Controls.Commands
         {
             InitializeComponent();
             this.GameMode.Items.AddRange(new object[] {
-            "Kreativ Modus",
-            "Überleben Modus",
-            "Abenteuer Modus",
-            "Zuschauer Modus"});
+            Main.rm.GetString("Creative") + " " + Main.rm.GetString("Mode"),
+            Main.rm.GetString("Survival") + " " + Main.rm.GetString("Mode"),
+            Main.rm.GetString("Adventure") + " " + Main.rm.GetString("Mode"),
+            Main.rm.GetString("Spectator") + " " + Main.rm.GetString("Mode")});
 
-            this.GameMode.SelectedItem = "Kreativ Modus";
+            this.GameMode.SelectedItem = Main.rm.GetString("Creative") + " " + Main.rm.GetString("Mode");
+            SetGamemode_Label.Text = Main.rm.GetString("Set_GameMode");
+            to.Text = Main.rm.GetString("to");
 
             //Set Font
 #if !DEBUG

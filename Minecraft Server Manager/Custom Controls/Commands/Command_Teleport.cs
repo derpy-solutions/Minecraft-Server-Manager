@@ -13,6 +13,8 @@ namespace Minecraft_Server_Manager.Custom_Controls.Commands
         public Command_Teleport()
         {
             InitializeComponent();
+            Teleport_Label.Text = Main.rm.GetString("Teleport");
+            to_Player.Text = Main.rm.GetString("to_Player");
 
             //Set Font
 #if !DEBUG

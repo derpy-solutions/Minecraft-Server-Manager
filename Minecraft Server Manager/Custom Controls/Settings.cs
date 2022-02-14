@@ -6,12 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
+using System.Reflection;
 
 namespace Minecraft_Server_Manager.Custom_Controls
 {
     public partial class Settings : UserControl
     {
+        bool initialized = false;
         public Settings()
         {
             InitializeComponent();
@@ -41,6 +42,15 @@ namespace Minecraft_Server_Manager.Custom_Controls
 #endif
             }
 
+            Header.Text = Main.rm.GetString("Settings");
+            ServerPath_Label.Text = "Server " + Main.rm.GetString("Path");
+            DataPath_Label.Text = "Data " + Main.rm.GetString("Path");
+            JavaPath_Label.Text = "Java " + Main.rm.GetString("Path");
+            CMDCommand_Label.Text = "CMD " + Main.rm.GetString("Command");
+            CheckForUpdates.Text = Main.rm.GetString("SearchForUpdates");
+            ResetSettings.Text = Main.rm.GetString("ResetSettings");
+            LanguageLabel.Text = Main.rm.GetString("Language");
+
             Inits.Voids.Add(Init);
         }
 
@@ -51,8 +61,39 @@ namespace Minecraft_Server_Manager.Custom_Controls
             JavaPath_TextBox.Text = Properties.Settings.Default.JavaPath;
             CMDCommand_TextBox.Text = Properties.Settings.Default.cmdCommand;
             CheckForUpdates.Checked = Properties.Settings.Default.CheckForUpdates;
-            Console.WriteLine("Check For Updates: " + Properties.Settings.Default.CheckForUpdates);
-            //Properties.Settings.Default.CheckForUpdates;
+            show_Tooltips.Checked = Properties.Settings.Default.ShowTooltips;
+
+            switch (Properties.Settings.Default.Language)
+            {
+                case "DE":
+                    LanguageSelect.SelectedItem = "Deutsch";
+                    break;
+
+                case "EN":
+                    LanguageSelect.SelectedItem = "English";
+                    break;
+            }
+
+            if (Properties.Settings.Default.ShowTooltips)
+            {
+                MyControls.Main.toolTip1.SetToolTip(ServerPath_Label, Main.rm.GetString("ttp_ServerPath"));
+                MyControls.Main.toolTip1.SetToolTip(ServerPath_TextBox, Main.rm.GetString("ttp_ServerPath"));
+                MyControls.Main.toolTip1.SetToolTip(ServerPath_Browse, Main.rm.GetString("ttp_Browse") + " " + Main.rm.GetString("Server") + " " + Main.rm.GetString("Path"));
+
+                MyControls.Main.toolTip1.SetToolTip(DataPath_Label, Main.rm.GetString("ttp_DataPath"));
+                MyControls.Main.toolTip1.SetToolTip(DataPath_TextBox, Main.rm.GetString("ttp_DataPath"));
+                MyControls.Main.toolTip1.SetToolTip(DataPath_Browse, Main.rm.GetString("ttp_Browse") + " " +" Data " + Main.rm.GetString("Path"));
+
+                MyControls.Main.toolTip1.SetToolTip(JavaPath_Label, Main.rm.GetString("ttp_JavaPath"));
+                MyControls.Main.toolTip1.SetToolTip(JavaPath_TextBox, Main.rm.GetString("ttp_JavaPath"));
+                MyControls.Main.toolTip1.SetToolTip(JavaPath_Browse, Main.rm.GetString("ttp_Browse") + " " + " Java " + Main.rm.GetString("Path"));
+
+                MyControls.Main.toolTip1.SetToolTip(CMDCommand_Label, Main.rm.GetString("ttp_CMD"));
+                MyControls.Main.toolTip1.SetToolTip(CMDCommand_TextBox, Main.rm.GetString("ttp_CMD"));
+                MyControls.Main.toolTip1.SetToolTip(ResetSettings, Main.rm.GetString("ttp_Reset"));
+            }
+
+            initialized = true;
         }
 
         private void ResetSettings_Click(object sender, EventArgs e)
@@ -194,6 +235,68 @@ namespace Minecraft_Server_Manager.Custom_Controls
             {
                 CheckForUpdates.Image = Properties.Resources.checkbox_unchecked;
             }
+        }
+
+        private void LanguageSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (LanguageSelect.SelectedIndex > -1 && initialized)
+            {
+                switch (LanguageSelect.SelectedItem)
+                {
+                    case "Deutsch":
+                        Properties.Settings.Default.Language = "DE";
+                        Main.rm = new System.Resources.ResourceManager("Minecraft_Server_Manager.de_local", Assembly.GetExecutingAssembly());
+                        Properties.Settings.Default.Save();
+                        MyControls.Main.restartPopUp.Content.Text = Main.rm.GetString("Restart_Language");
+                        MyControls.Main.restartPopUp.Restart.Text = Main.rm.GetString("Restart");
+                        MyControls.Main.restartPopUp.NoRestart.Text = Main.rm.GetString("NoRestart");
+                        MyControls.Main.restartPopUp.Show();
+                        break;
+
+                    case "English":
+                        Properties.Settings.Default.Language = "EN";
+                        Main.rm = new System.Resources.ResourceManager("Minecraft_Server_Manager.en_local", Assembly.GetExecutingAssembly());
+                        Properties.Settings.Default.Save();
+                        MyControls.Main.restartPopUp.Content.Text = Main.rm.GetString("Restart_Language");
+                        MyControls.Main.restartPopUp.Restart.Text = Main.rm.GetString("Restart");
+                        MyControls.Main.restartPopUp.NoRestart.Text = Main.rm.GetString("NoRestart");
+                        MyControls.Main.restartPopUp.Show();
+                        break;
+                }
+            }
+        }
+
+        private void show_Tooltips_CheckedChanged(object sender, EventArgs e)
+        {
+            if (show_Tooltips.CheckState == CheckState.Checked)
+            {
+                show_Tooltips.Image = Properties.Resources.checkbox_checked;
+            }
+            else
+            {
+                show_Tooltips.Image = Properties.Resources.checkbox_unchecked;
+            }
+        }
+
+        private void show_Tooltips_Click(object sender, EventArgs e)
+        {
+
+                if (show_Tooltips.CheckState == CheckState.Checked)
+                {
+                    show_Tooltips.CheckState = CheckState.Unchecked;
+                }
+                else
+                {
+                    show_Tooltips.CheckState = CheckState.Checked;
+                }
+
+                Properties.Settings.Default.ShowTooltips = show_Tooltips.Checked;
+                Properties.Settings.Default.Save();
+
+            MyControls.Main.restartPopUp.Content.Text = Main.rm.GetString("Show_ToolTips_Changed");
+            MyControls.Main.restartPopUp.Restart.Text = Main.rm.GetString("Restart");
+            MyControls.Main.restartPopUp.NoRestart.Text = Main.rm.GetString("NoRestart");
+            MyControls.Main.restartPopUp.Show();
         }
     }
 }

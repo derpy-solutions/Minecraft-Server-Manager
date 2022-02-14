@@ -21,7 +21,7 @@ namespace Minecraft_Server_Manager
         {
             return Process.GetProcesses().Any(x => x.Id == id);
         }
-
+        public static string Language = "EN";
         public static List<Server> ServerList = new List<Server>();
         public static List<Server> Servers = new List<Server>();
         public static List<string> ServerFoldersList = new List<string>();

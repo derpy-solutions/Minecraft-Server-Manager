@@ -107,6 +107,6 @@ namespace Minecraft_Server_Manager.Custom_Controls
 
         public System.Windows.Forms.Button NoRestart;
         public System.Windows.Forms.Button Restart;
-        private System.Windows.Forms.Label Content;
+        public System.Windows.Forms.Label Content;
     }
 }

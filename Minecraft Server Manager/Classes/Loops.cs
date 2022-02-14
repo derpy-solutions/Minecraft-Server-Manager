@@ -12,7 +12,7 @@ using System.Reflection;
 
 namespace Minecraft_Server_Manager
 {
-    public partial class Main
+    public class Loops
     {
         Loop loop;
         Thread loopThread;
@@ -88,6 +88,11 @@ namespace Minecraft_Server_Manager
 
                     Thread.Sleep(250);
                 }
+
+                if (!G.running)
+                {
+                    Console.WriteLine("Not Running but ticking!");
+                }
             }
         }
         public class Changes : EventArgs
@@ -101,7 +106,7 @@ namespace Minecraft_Server_Manager
                 Servers = servers;
                 updatesFound = updatestatus;
                 installPopUp = installpop;
-        }
+            }
         }
         public class ServerUpdate
         {
@@ -111,9 +116,9 @@ namespace Minecraft_Server_Manager
         private void OnChange(object sender, Changes e)
         {
             Loop.processingChanges = true;
-            if (this.InvokeRequired)
+            if (MyControls.Main.InvokeRequired)
             {
-                this.BeginInvoke((MethodInvoker)delegate
+                MyControls.Main.BeginInvoke((MethodInvoker)delegate
                 {
                     OnChange(sender, e);
                 });

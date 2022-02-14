@@ -29,20 +29,20 @@ namespace Minecraft_Server_Manager.Custom_Controls
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.FavoritesLabel = new System.Windows.Forms.Label();
             this.FavoritesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Add = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // FavoritesLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(45, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Favoriten";
+            this.FavoritesLabel.AutoSize = true;
+            this.FavoritesLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FavoritesLabel.Location = new System.Drawing.Point(45, 7);
+            this.FavoritesLabel.Name = "FavoritesLabel";
+            this.FavoritesLabel.Size = new System.Drawing.Size(97, 22);
+            this.FavoritesLabel.TabIndex = 0;
+            this.FavoritesLabel.Text = "Favoriten";
             // 
             // FavoritesPanel
             // 
@@ -83,7 +83,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.ClientSize = new System.Drawing.Size(720, 400);
             this.Controls.Add(this.Add);
             this.Controls.Add(this.FavoritesPanel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FavoritesLabel);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -103,7 +103,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label FavoritesLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.FlowLayoutPanel FavoritesPanel;
         public System.Windows.Forms.Button Add;

@@ -48,6 +48,9 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.JavaPath_Label = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.CheckForUpdates = new System.Windows.Forms.CheckBox();
+            this.LanguageSelect = new System.Windows.Forms.ComboBox();
+            this.LanguageLabel = new System.Windows.Forms.Label();
+            this.show_Tooltips = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Header
@@ -131,6 +134,8 @@ namespace Minecraft_Server_Manager.Custom_Controls
             // ResetSettings
             // 
             this.ResetSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResetSettings.AutoSize = true;
+            this.ResetSettings.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ResetSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ResetSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.ResetSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -138,12 +143,13 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.ResetSettings.ForeColor = System.Drawing.Color.Transparent;
             this.ResetSettings.Image = ((System.Drawing.Image)(resources.GetObject("ResetSettings.Image")));
             this.ResetSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ResetSettings.Location = new System.Drawing.Point(173, 506);
+            this.ResetSettings.Location = new System.Drawing.Point(182, 553);
             this.ResetSettings.Name = "ResetSettings";
-            this.ResetSettings.Size = new System.Drawing.Size(253, 34);
+            this.ResetSettings.Size = new System.Drawing.Size(244, 30);
             this.ResetSettings.TabIndex = 22;
             this.ResetSettings.Text = "Einstellungen zurücksetzten";
             this.ResetSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ResetSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ResetSettings.UseVisualStyleBackColor = false;
             this.ResetSettings.Click += new System.EventHandler(this.ResetSettings_Click);
             // 
@@ -247,11 +253,60 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.CheckForUpdates.CheckedChanged += new System.EventHandler(this.CheckForUpdates_CheckedChanged);
             this.CheckForUpdates.Click += new System.EventHandler(this.CheckForUpdates_Click);
             // 
+            // LanguageSelect
+            // 
+            this.LanguageSelect.FormattingEnabled = true;
+            this.LanguageSelect.Items.AddRange(new object[] {
+            "Deutsch",
+            "English"});
+            this.LanguageSelect.Location = new System.Drawing.Point(7, 443);
+            this.LanguageSelect.Name = "LanguageSelect";
+            this.LanguageSelect.Size = new System.Drawing.Size(137, 28);
+            this.LanguageSelect.TabIndex = 32;
+            this.LanguageSelect.Text = "Deutsch";
+            this.LanguageSelect.SelectedIndexChanged += new System.EventHandler(this.LanguageSelect_SelectedIndexChanged);
+            // 
+            // LanguageLabel
+            // 
+            this.LanguageLabel.AutoSize = true;
+            this.LanguageLabel.Location = new System.Drawing.Point(7, 420);
+            this.LanguageLabel.Name = "LanguageLabel";
+            this.LanguageLabel.Size = new System.Drawing.Size(70, 20);
+            this.LanguageLabel.TabIndex = 33;
+            this.LanguageLabel.Text = "Sprache";
+            // 
+            // show_Tooltips
+            // 
+            this.show_Tooltips.Appearance = System.Windows.Forms.Appearance.Button;
+            this.show_Tooltips.AutoCheck = false;
+            this.show_Tooltips.AutoSize = true;
+            this.show_Tooltips.BackColor = System.Drawing.Color.Transparent;
+            this.show_Tooltips.FlatAppearance.BorderSize = 0;
+            this.show_Tooltips.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.show_Tooltips.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.show_Tooltips.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
+            this.show_Tooltips.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.show_Tooltips.ForeColor = System.Drawing.Color.White;
+            this.show_Tooltips.Image = global::Minecraft_Server_Manager.Properties.Resources.checkbox_unchecked;
+            this.show_Tooltips.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.show_Tooltips.Location = new System.Drawing.Point(7, 376);
+            this.show_Tooltips.Name = "show_Tooltips";
+            this.show_Tooltips.Size = new System.Drawing.Size(211, 30);
+            this.show_Tooltips.TabIndex = 34;
+            this.show_Tooltips.Text = "Zeige Kurzinfos (Tooltips)";
+            this.show_Tooltips.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.show_Tooltips.UseVisualStyleBackColor = false;
+            this.show_Tooltips.CheckedChanged += new System.EventHandler(this.show_Tooltips_CheckedChanged);
+            this.show_Tooltips.Click += new System.EventHandler(this.show_Tooltips_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.show_Tooltips);
+            this.Controls.Add(this.LanguageLabel);
+            this.Controls.Add(this.LanguageSelect);
             this.Controls.Add(this.CheckForUpdates);
             this.Controls.Add(this.Header);
             this.Controls.Add(this.DataPath_Browse);
@@ -270,7 +325,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Settings";
-            this.Size = new System.Drawing.Size(429, 541);
+            this.Size = new System.Drawing.Size(429, 584);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +350,8 @@ namespace Minecraft_Server_Manager.Custom_Controls
         public System.Windows.Forms.Label JavaPath_Label;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         public System.Windows.Forms.CheckBox CheckForUpdates;
+        private System.Windows.Forms.ComboBox LanguageSelect;
+        private System.Windows.Forms.Label LanguageLabel;
+        public System.Windows.Forms.CheckBox show_Tooltips;
     }
 }

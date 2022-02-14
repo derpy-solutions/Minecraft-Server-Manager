@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Minecraft_Server_Manager</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>Minecraft Server Manager.ico</ApplicationIcon>
     <StartupObject />
-	<FileVersion>0.1.0</FileVersion>
+	<FileVersion>0.1.1</FileVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>derpy.pfx</AssemblyOriginatorKeyFile>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -34,6 +34,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="de_local.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>de_local.resx</DependentUpon>
+    </Compile>
+    <Compile Update="en_local.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>en_local.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -47,6 +57,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="de_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>de_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="en_local.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en_local.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

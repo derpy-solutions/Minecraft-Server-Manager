@@ -31,9 +31,11 @@ namespace Minecraft_Server_Manager.Custom_Controls.Commands
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Command_Kick));
             this.Run = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.of_Server = new System.Windows.Forms.Label();
+            this.Kick_Label = new System.Windows.Forms.Label();
             this.Player = new System.Windows.Forms.ComboBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Run
@@ -56,67 +58,81 @@ namespace Minecraft_Server_Manager.Custom_Controls.Commands
             this.Run.UseVisualStyleBackColor = false;
             this.Run.Click += new System.EventHandler(this.Run_Click);
             // 
-            // label2
+            // of_Server
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(211, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 20);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "vom Server.";
+            this.of_Server.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.of_Server.AutoSize = true;
+            this.of_Server.BackColor = System.Drawing.Color.Transparent;
+            this.of_Server.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.of_Server.ForeColor = System.Drawing.Color.White;
+            this.of_Server.Location = new System.Drawing.Point(209, 4);
+            this.of_Server.Margin = new System.Windows.Forms.Padding(0);
+            this.of_Server.Name = "of_Server";
+            this.of_Server.Size = new System.Drawing.Size(97, 20);
+            this.of_Server.TabIndex = 31;
+            this.of_Server.Text = "vom Server.";
             // 
-            // label1
+            // Kick_Label
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-2, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Kicke";
+            this.Kick_Label.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.Kick_Label.AutoSize = true;
+            this.Kick_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Kick_Label.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Kick_Label.ForeColor = System.Drawing.Color.White;
+            this.Kick_Label.Location = new System.Drawing.Point(0, 4);
+            this.Kick_Label.Margin = new System.Windows.Forms.Padding(0);
+            this.Kick_Label.Name = "Kick_Label";
+            this.Kick_Label.Size = new System.Drawing.Size(49, 20);
+            this.Kick_Label.TabIndex = 30;
+            this.Kick_Label.Text = "Kicke";
             // 
             // Player
             // 
             this.Player.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.Player.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Player.FormattingEnabled = true;
-            this.Player.Location = new System.Drawing.Point(49, 26);
+            this.Player.Location = new System.Drawing.Point(49, 0);
+            this.Player.Margin = new System.Windows.Forms.Padding(0);
             this.Player.Name = "Player";
             this.Player.Size = new System.Drawing.Size(160, 28);
             this.Player.Sorted = true;
             this.Player.TabIndex = 29;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.flowLayoutPanel1.Controls.Add(this.Kick_Label);
+            this.flowLayoutPanel1.Controls.Add(this.Player);
+            this.flowLayoutPanel1.Controls.Add(this.of_Server);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 25);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(574, 30);
+            this.flowLayoutPanel1.TabIndex = 40;
             // 
             // Command_Kick
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.Run);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Player);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Command_Kick";
             this.Size = new System.Drawing.Size(655, 80);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         public System.Windows.Forms.Button Run;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label of_Server;
+        private System.Windows.Forms.Label Kick_Label;
         public System.Windows.Forms.ComboBox Player;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

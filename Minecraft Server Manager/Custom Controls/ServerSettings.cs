@@ -24,6 +24,11 @@ namespace Minecraft_Server_Manager.Custom_Controls
             RAM_Amount.Increment = 1;
             RAM_Amount.Maximum = 64;
 
+            Delete.Text = Main.rm.GetString("DeleteServer");
+            Save.Text = Main.rm.GetString("Save");
+            Discard.Text = Main.rm.GetString("Cancel");
+            ShowUI.Text = Main.rm.GetString("ShowUI");
+
             //Set Fonts
             if (Fonts.setFonts)
             {

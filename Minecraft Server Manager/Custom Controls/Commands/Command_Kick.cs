@@ -14,6 +14,9 @@ namespace Minecraft_Server_Manager.Custom_Controls.Commands
         {
             InitializeComponent();
 
+            Kick_Label.Text = Main.rm.GetString("Kick");
+            of_Server.Text = Main.rm.GetString("of_the_server");
+
             //Set Font
 #if !DEBUG
 label1.Font = Fonts.Text();

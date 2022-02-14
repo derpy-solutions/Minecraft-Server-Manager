@@ -216,12 +216,12 @@ namespace Minecraft_Server_Manager
                 {
                     case 1:
                         serverCard.sStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(56)))));
-                        serverCard.sStatus.Text = "Server gestartet ...";
+                        serverCard.sStatus.Text = Main.rm.GetString("Server_Started"); 
                         break;
 
                     case 2:
                         serverCard.sStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(255)))), ((int)(((byte)(250)))));
-                        serverCard.sStatus.Text = "Lade Server ...";
+                        serverCard.sStatus.Text = Main.rm.GetString("Server_Loading");
                         break;
 
                     case 3:
@@ -232,12 +232,12 @@ namespace Minecraft_Server_Manager
                             port = port.Remove(0, 3);
                         }
 
-                        serverCard.sStatus.Text = "Online auf Jugendhaus #" + port;
+                        serverCard.sStatus.Text = Main.rm.GetString("Server_Online")  + " Port #" + port;
                         break;
 
                     case 4:
                         serverCard.sStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(41)))), ((int)(((byte)(12)))));
-                        serverCard.sStatus.Text = "Server fährt herunter ...";
+                        serverCard.sStatus.Text = Main.rm.GetString("Server_Shutdown");
                         break;
 
                     default:
@@ -259,14 +259,14 @@ namespace Minecraft_Server_Manager
 
                 foreach (ComboBox ctrl in controls)
                 {
-                    if (ctrl.SelectedItem != null && (!players.Contains(ctrl.SelectedItem.ToString()) || ctrl.SelectedItem.ToString() == "" || ctrl.SelectedItem.ToString() == "Spieler"))
+                    if (ctrl.SelectedItem != null && (!players.Contains(ctrl.SelectedItem.ToString()) || ctrl.SelectedItem.ToString() == "" || ctrl.SelectedItem.ToString() == Main.rm.GetString("Player")))
                     {
                         ctrl.SelectedItem = null;
                     }
 
-                    if (ctrl.Items.Contains("Spieler"))
+                    if (ctrl.Items.Contains(Main.rm.GetString("Player")))
                     {
-                        ctrl.Items.Remove("Spieler");
+                        ctrl.Items.Remove(Main.rm.GetString("Player"));
                     }
                 }
 
@@ -311,8 +311,8 @@ namespace Minecraft_Server_Manager
 
                     if (ctrl.SelectedItem == null)
                     {
-                        ctrl.Items.Add("Spieler");
-                        ctrl.SelectedItem = "Spieler";
+                        ctrl.Items.Add(Main.rm.GetString("Player"));
+                        ctrl.SelectedItem = Main.rm.GetString("Player");
                     }
                 }
             }
@@ -347,6 +347,18 @@ namespace Minecraft_Server_Manager
                     mode = "adventure";
                     break;
                 case "Zuschauer Modus":
+                    mode = "spectator";
+                    break;
+                case "Creative Mode":
+                    mode = "creative";
+                    break;
+                case "Survival Mode":
+                    mode = "survival";
+                    break;
+                case "Adventure Mode":
+                    mode = "adventure";
+                    break;
+                case "Spectator Mode":
                     mode = "spectator";
                     break;
             }

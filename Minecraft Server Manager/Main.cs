@@ -15,9 +15,23 @@ namespace Minecraft_Server_Manager
 {
     public partial class Main : Form
     {
+        public static System.Resources.ResourceManager rm = new System.Resources.ResourceManager("Minecraft_Server_Manager.de_local", Assembly.GetExecutingAssembly());
+
         public static bool initialized;
         public Main()
         {
+            switch (Properties.Settings.Default.Language)
+            {
+                case "EN":
+                    rm = new System.Resources.ResourceManager("Minecraft_Server_Manager.en_local", Assembly.GetExecutingAssembly());
+                    break;
+
+                case "DE":
+                    rm = new System.Resources.ResourceManager("Minecraft_Server_Manager.de_local", Assembly.GetExecutingAssembly());
+                    break;
+            }
+            Console.WriteLine("Creative: " + rm.GetString("Creative"));
+
 #if DEBUG
             Console.WriteLine("DEBUG");
 #else
@@ -35,6 +49,7 @@ namespace Minecraft_Server_Manager
             Directory.CreateDirectory(Properties.Settings.Default.ServerPath);
             Directory.CreateDirectory(Properties.Settings.Default.DataPath);
 
+
             InitializeComponent();
             MyControls.Main = this;
             MyControls.SideBar = sideBar1;
@@ -48,6 +63,7 @@ namespace Minecraft_Server_Manager
                 G.Favorites = MyControls.FavoritesMenu;
             }
 
+
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             System.Diagnostics.FileVersionInfo fvi = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location);
             string version = fvi.FileVersion;
@@ -57,7 +73,10 @@ namespace Minecraft_Server_Manager
             MyControls.SideBar.CurrentVersion.Text = G.Ver.current.ToString();
 
             FavoriteCommands.Load();
-            InitializeLoop();
+
+            Loops loops = new Loops();
+            loops.InitializeLoop();
+
             foreach (Action action in Inits.Voids)
             {
                 action();

@@ -17,6 +17,14 @@ namespace Minecraft_Server_Manager.Custom_Controls
         {
             InitializeComponent();
 
+            SideBar_Menu.Text = "         " + Main.rm.GetString("Menu");
+            SideBar_Servers.Text = "         " + Main.rm.GetString("Servers");
+            SideBar_Settings.Text = "         " + Main.rm.GetString("Settings");
+            UpdateButton.Text = "         " + Main.rm.GetString("Update");
+            CurrentLabel.Text = Main.rm.GetString("Current") + ":";
+            NewestLabel.Text = Main.rm.GetString("Newest") + ":";
+
+
             //Set Fonts
             if (Fonts.setFonts)
             {
@@ -32,7 +40,14 @@ namespace Minecraft_Server_Manager.Custom_Controls
             NewestVersion.Font = Fonts.Text();
 #endif
             }
-            }
+
+            Inits.Voids.Add(Init);
+        }
+
+        public void Init()
+        {
+        }
+
         private void SideBarTimer_Tick(object sender, EventArgs e)
         {
             if (sidebarExpand)
@@ -93,7 +108,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
                 SideBarTimer.Start();
             }
         }
-        private static void DownloadProgressCallback4(object sender, DownloadProgressChangedEventArgs e)
+        public void DownloadProgressCallback4(object sender, DownloadProgressChangedEventArgs e)
         {
             // Displays the operation identifier, and the transfer progress.
             Console.WriteLine("{0}    downloaded {1} of {2} bytes. {3} % complete...",
@@ -107,8 +122,15 @@ namespace Minecraft_Server_Manager.Custom_Controls
             if (e.ProgressPercentage == 100)
             {
                 MyControls.SideBar.DownloadProgress.Hide();
-                MyControls.SideBar.UpdateButton.Text = "         Install Update";
+                MyControls.SideBar.UpdateButton.Text = "         " + Main.rm.GetString("Install")  + " Update";
                 MyControls.SideBar.UpdateButton.Image = Properties.Resources.unbox;
+
+
+                MyControls.Main.restartPopUp.type = "Install";
+                MyControls.Main.restartPopUp.Content.Text = Main.rm.GetString("DownloadComplete");
+                MyControls.Main.restartPopUp.Restart.Text = Main.rm.GetString("Yes");
+                MyControls.Main.restartPopUp.NoRestart.Text = Main.rm.GetString("No");
+                MyControls.Main.restartPopUp.Show();
             }
         }
 
