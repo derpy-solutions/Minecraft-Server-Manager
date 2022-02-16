@@ -198,7 +198,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             // 
             // Favorites
             // 
-            this.Favorites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Favorites.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Favorites.BackColor = System.Drawing.Color.Transparent;
             this.Favorites.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.Favorites.FlatAppearance.BorderSize = 0;
@@ -208,7 +208,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.Favorites.ForeColor = System.Drawing.Color.Transparent;
             this.Favorites.Image = global::Minecraft_Server_Manager.Properties.Resources.library;
             this.Favorites.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Favorites.Location = new System.Drawing.Point(716, 161);
+            this.Favorites.Location = new System.Drawing.Point(716, 173);
             this.Favorites.Name = "Favorites";
             this.Favorites.Size = new System.Drawing.Size(30, 30);
             this.Favorites.TabIndex = 30;

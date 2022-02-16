@@ -131,5 +131,29 @@ namespace Minecraft_Server_Manager.Properties {
                 this["ShowTooltips"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public int RAM_Amount {
+            get {
+                return ((int)(this["RAM_Amount"]));
+            }
+            set {
+                this["RAM_Amount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("GB")]
+        public string RAM_Unit {
+            get {
+                return ((string)(this["RAM_Unit"]));
+            }
+            set {
+                this["RAM_Unit"] = value;
+            }
+        }
     }
 }

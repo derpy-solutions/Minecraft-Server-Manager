@@ -116,6 +116,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.RAM_Amount.TabIndex = 31;
             this.RAM_Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.RAM_Amount.ThousandsSeparator = true;
+            this.RAM_Amount.ValueChanged += new System.EventHandler(this.RAM_Amount_ValueChanged);
             // 
             // ShowUI
             // 

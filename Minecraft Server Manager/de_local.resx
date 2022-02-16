@@ -231,6 +231,9 @@ Jetzt neustarten?</value>
   <data name="Settings" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
+  <data name="Settings_RAM" xml:space="preserve">
+    <value>Standard Server RAM</value>
+  </data>
   <data name="Set_GameMode" xml:space="preserve">
     <value>Setzte den Spielmodus von</value>
   </data>

@@ -51,6 +51,10 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.LanguageSelect = new System.Windows.Forms.ComboBox();
             this.LanguageLabel = new System.Windows.Forms.Label();
             this.show_Tooltips = new System.Windows.Forms.CheckBox();
+            this.RAM_Amount = new System.Windows.Forms.NumericUpDown();
+            this.RAM_Unit = new System.Windows.Forms.ComboBox();
+            this.RAM_Label = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.RAM_Amount)).BeginInit();
             this.SuspendLayout();
             // 
             // Header
@@ -143,7 +147,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.ResetSettings.ForeColor = System.Drawing.Color.Transparent;
             this.ResetSettings.Image = ((System.Drawing.Image)(resources.GetObject("ResetSettings.Image")));
             this.ResetSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ResetSettings.Location = new System.Drawing.Point(182, 553);
+            this.ResetSettings.Location = new System.Drawing.Point(182, 727);
             this.ResetSettings.Name = "ResetSettings";
             this.ResetSettings.Size = new System.Drawing.Size(244, 30);
             this.ResetSettings.TabIndex = 22;
@@ -243,7 +247,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.CheckForUpdates.ForeColor = System.Drawing.Color.White;
             this.CheckForUpdates.Image = global::Minecraft_Server_Manager.Properties.Resources.checkbox_unchecked;
             this.CheckForUpdates.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CheckForUpdates.Location = new System.Drawing.Point(7, 340);
+            this.CheckForUpdates.Location = new System.Drawing.Point(7, 436);
             this.CheckForUpdates.Name = "CheckForUpdates";
             this.CheckForUpdates.Size = new System.Drawing.Size(295, 30);
             this.CheckForUpdates.TabIndex = 31;
@@ -259,7 +263,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.LanguageSelect.Items.AddRange(new object[] {
             "Deutsch",
             "English"});
-            this.LanguageSelect.Location = new System.Drawing.Point(7, 443);
+            this.LanguageSelect.Location = new System.Drawing.Point(7, 539);
             this.LanguageSelect.Name = "LanguageSelect";
             this.LanguageSelect.Size = new System.Drawing.Size(137, 28);
             this.LanguageSelect.TabIndex = 32;
@@ -269,7 +273,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             // LanguageLabel
             // 
             this.LanguageLabel.AutoSize = true;
-            this.LanguageLabel.Location = new System.Drawing.Point(7, 420);
+            this.LanguageLabel.Location = new System.Drawing.Point(7, 516);
             this.LanguageLabel.Name = "LanguageLabel";
             this.LanguageLabel.Size = new System.Drawing.Size(70, 20);
             this.LanguageLabel.TabIndex = 33;
@@ -289,7 +293,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.show_Tooltips.ForeColor = System.Drawing.Color.White;
             this.show_Tooltips.Image = global::Minecraft_Server_Manager.Properties.Resources.checkbox_unchecked;
             this.show_Tooltips.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.show_Tooltips.Location = new System.Drawing.Point(7, 376);
+            this.show_Tooltips.Location = new System.Drawing.Point(7, 472);
             this.show_Tooltips.Name = "show_Tooltips";
             this.show_Tooltips.Size = new System.Drawing.Size(211, 30);
             this.show_Tooltips.TabIndex = 34;
@@ -299,11 +303,50 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.show_Tooltips.CheckedChanged += new System.EventHandler(this.show_Tooltips_CheckedChanged);
             this.show_Tooltips.Click += new System.EventHandler(this.show_Tooltips_Click);
             // 
+            // RAM_Amount
+            // 
+            this.RAM_Amount.Location = new System.Drawing.Point(7, 360);
+            this.RAM_Amount.Name = "RAM_Amount";
+            this.RAM_Amount.Size = new System.Drawing.Size(130, 26);
+            this.RAM_Amount.TabIndex = 37;
+            this.RAM_Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.RAM_Amount.ThousandsSeparator = true;
+            this.RAM_Amount.ValueChanged += new System.EventHandler(this.RAM_Amount_ValueChanged);
+            // 
+            // RAM_Unit
+            // 
+            this.RAM_Unit.FormattingEnabled = true;
+            this.RAM_Unit.Items.AddRange(new object[] {
+            "GB",
+            "MB"});
+            this.RAM_Unit.Location = new System.Drawing.Point(144, 359);
+            this.RAM_Unit.Margin = new System.Windows.Forms.Padding(4);
+            this.RAM_Unit.Name = "RAM_Unit";
+            this.RAM_Unit.Size = new System.Drawing.Size(54, 28);
+            this.RAM_Unit.TabIndex = 36;
+            this.RAM_Unit.SelectedIndexChanged += new System.EventHandler(this.RAM_Unit_SelectedIndexChanged);
+            // 
+            // RAM_Label
+            // 
+            this.RAM_Label.AutoSize = true;
+            this.RAM_Label.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RAM_Label.ForeColor = System.Drawing.Color.White;
+            this.RAM_Label.Location = new System.Drawing.Point(7, 335);
+            this.RAM_Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RAM_Label.Name = "RAM_Label";
+            this.RAM_Label.Size = new System.Drawing.Size(165, 20);
+            this.RAM_Label.TabIndex = 35;
+            this.RAM_Label.Text = "Standard Server RAM";
+            this.RAM_Label.Click += new System.EventHandler(this.RAM_Label_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.RAM_Amount);
+            this.Controls.Add(this.RAM_Unit);
+            this.Controls.Add(this.RAM_Label);
             this.Controls.Add(this.show_Tooltips);
             this.Controls.Add(this.LanguageLabel);
             this.Controls.Add(this.LanguageSelect);
@@ -325,7 +368,8 @@ namespace Minecraft_Server_Manager.Custom_Controls
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Settings";
-            this.Size = new System.Drawing.Size(429, 584);
+            this.Size = new System.Drawing.Size(429, 758);
+            ((System.ComponentModel.ISupportInitialize)(this.RAM_Amount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +397,8 @@ namespace Minecraft_Server_Manager.Custom_Controls
         private System.Windows.Forms.ComboBox LanguageSelect;
         private System.Windows.Forms.Label LanguageLabel;
         public System.Windows.Forms.CheckBox show_Tooltips;
+        public System.Windows.Forms.NumericUpDown RAM_Amount;
+        public System.Windows.Forms.ComboBox RAM_Unit;
+        public System.Windows.Forms.Label RAM_Label;
     }
 }

@@ -400,6 +400,15 @@ namespace Minecraft_Server_Manager {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Default Server RAM.
+        /// </summary>
+        internal static string Settings_RAM {
+            get {
+                return ResourceManager.GetString("Settings_RAM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show tooltips.
         /// </summary>
         internal static string Show_ToolTips {

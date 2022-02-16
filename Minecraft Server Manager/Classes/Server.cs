@@ -125,6 +125,8 @@ namespace Minecraft_Server_Manager
                     }
                     else
                     {
+                        RAM_Unit = Properties.Settings.Default.RAM_Unit;
+                        RAM_Amount = Properties.Settings.Default.RAM_Amount;
                         Save();
                     }
 

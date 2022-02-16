@@ -51,6 +51,7 @@ namespace Minecraft_Server_Manager.Custom_Controls
             show_Tooltips.Text = Main.rm.GetString("Show_ToolTips");
             ResetSettings.Text = Main.rm.GetString("ResetSettings");
             LanguageLabel.Text = Main.rm.GetString("Language");
+            RAM_Label.Text = Main.rm.GetString("Settings_RAM");
 
             Inits.Voids.Add(Init);
         }
@@ -63,6 +64,9 @@ namespace Minecraft_Server_Manager.Custom_Controls
             CMDCommand_TextBox.Text = Properties.Settings.Default.cmdCommand;
             CheckForUpdates.Checked = Properties.Settings.Default.CheckForUpdates;
             show_Tooltips.Checked = Properties.Settings.Default.ShowTooltips;
+
+            RAM_Amount.Value = Properties.Settings.Default.RAM_Amount;
+            RAM_Unit.SelectedItem = Properties.Settings.Default.RAM_Unit;
 
             switch (Properties.Settings.Default.Language)
             {
@@ -298,6 +302,26 @@ namespace Minecraft_Server_Manager.Custom_Controls
             MyControls.Main.restartPopUp.Restart.Text = Main.rm.GetString("Restart");
             MyControls.Main.restartPopUp.NoRestart.Text = Main.rm.GetString("NoRestart");
             MyControls.Main.restartPopUp.Show();
+        }
+
+        private void RAM_Label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RAM_Unit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (RAM_Unit.SelectedItem != null)
+            {
+                Properties.Settings.Default.RAM_Unit = RAM_Unit.SelectedItem.ToString();
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void RAM_Amount_ValueChanged(object sender, EventArgs e)
+        {
+                Properties.Settings.Default.RAM_Amount = Decimal.ToInt32(RAM_Amount.Value);
+                Properties.Settings.Default.Save();
         }
     }
 }

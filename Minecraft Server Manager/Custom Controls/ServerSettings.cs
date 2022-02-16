@@ -177,5 +177,10 @@ namespace Minecraft_Server_Manager.Custom_Controls
                 ShowUI.Image = Properties.Resources.checkbox_unchecked;
             }
         }
+
+        private void RAM_Amount_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
